@@ -27,8 +27,8 @@ struct JsonOpeningModel {
         jsonOpening.name ?? ""
     }
     
-    var moves: String {
+    var moves: [String] {
         let rawString = jsonOpening.moves ?? ""
-        return ""
+        return rawString.moves
     }
 }

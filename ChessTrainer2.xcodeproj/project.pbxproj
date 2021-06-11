@@ -43,6 +43,7 @@
 		ACE29D792673DAA200F1D9D8 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE29D782673DAA200F1D9D8 /* GameModel.swift */; };
 		ACE29D7B2673DBE300F1D9D8 /* OpeningParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE29D7A2673DBE300F1D9D8 /* OpeningParser.swift */; };
 		ACE29D7D2673DF3200F1D9D8 /* OpeningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE29D7C2673DF3200F1D9D8 /* OpeningViewModel.swift */; };
+		ACE29D7F2673F18600F1D9D8 /* stringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE29D7E2673F18600F1D9D8 /* stringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		ACE29D782673DAA200F1D9D8 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		ACE29D7A2673DBE300F1D9D8 /* OpeningParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningParser.swift; sourceTree = "<group>"; };
 		ACE29D7C2673DF3200F1D9D8 /* OpeningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningViewModel.swift; sourceTree = "<group>"; };
+		ACE29D7E2673F18600F1D9D8 /* stringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 				3F6C3353266CCA7F0070E83C /* Color+Extension.swift */,
 				3F6FB36A265FD33900E41C41 /* testExtension.swift */,
 				3F5E26742663D90600100EBB /* intExtension.swift */,
+				ACE29D7E2673F18600F1D9D8 /* stringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				3F6C335A266CCB010070E83C /* TabBarController.swift in Sources */,
 				3F6C334C266CAAF80070E83C /* openingGameCollectionDataSource.swift in Sources */,
 				3F6C335E266CEC9C0070E83C /* ProjectColors.swift in Sources */,
+				ACE29D7F2673F18600F1D9D8 /* stringExtension.swift in Sources */,
 				3F6FB335265FCECA00E41C41 /* LocalDatabaseHelpers.swift in Sources */,
 				ACE29D792673DAA200F1D9D8 /* GameModel.swift in Sources */,
 				3F6FB363265FD26F00E41C41 /* GeneralStyleView.swift in Sources */,
