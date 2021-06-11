@@ -87,6 +87,7 @@
 		ACE29D7A2673DBE300F1D9D8 /* OpeningParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningParser.swift; sourceTree = "<group>"; };
 		ACE29D7C2673DF3200F1D9D8 /* OpeningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningViewModel.swift; sourceTree = "<group>"; };
 		ACE29D7E2673F18600F1D9D8 /* stringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stringExtension.swift; sourceTree = "<group>"; };
+		ACE29D802673F3C000F1D9D8 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +134,7 @@
 				3F6FB320265FCE7000E41C41 /* Info.plist */,
 				3F6FB318265FCE7000E41C41 /* ChessTrainer2.xcdatamodeld */,
 				3F6C3350266CAB350070E83C /* TypeAliases.swift */,
+				ACE29D802673F3C000F1D9D8 /* MyPlayground.playground */,
 			);
 			path = ChessTrainer2;
 			sourceTree = "<group>";
