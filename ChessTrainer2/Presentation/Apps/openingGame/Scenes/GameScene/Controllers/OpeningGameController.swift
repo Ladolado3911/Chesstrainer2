@@ -13,15 +13,24 @@ class OpeningGameController: UIViewController {
     @IBOutlet weak var openingName: UILabel!
     @IBOutlet weak var moveNum: UILabel!
     
-    var dataSource: OpeningGameCollectionDataSource!
+    private var openingParser: OpeningParser!
+    private var viewModel: OpeningViewModel!
+    private var dataSource: OpeningGameCollectionDataSource!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataSource = OpeningGameCollectionDataSource(collectView: collectView, controller: self)
+        configViewModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         dataSource.setInitialInfo()
+    }
+    
+    func configViewModel() {
+        openingParser = OpeningParser()
+        viewModel = OpeningViewModel(with: openingParser)
+        dataSource = OpeningGameCollectionDataSource(collectView: collectView, controller: self, viewModel: viewModel)
     }
 }

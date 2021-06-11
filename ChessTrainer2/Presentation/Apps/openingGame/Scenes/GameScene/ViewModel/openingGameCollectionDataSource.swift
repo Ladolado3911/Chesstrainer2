@@ -12,6 +12,7 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     
     var collectView: UICollectionView!
     var rootController: OpeningGameController!
+    var viewModel: OpeningViewModel!
     
     var game: OpeningGame = OpeningGame(data: oneMoveOpenings)
     var currentOpening: Opening?
@@ -27,10 +28,11 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     var color2 = ProjectColors.white
 //    var correctCount: Int = 0
     
-    init(collectView collect: UICollectionView, controller ctrl: OpeningGameController) {
+    init(collectView collect: UICollectionView, controller ctrl: OpeningGameController, viewModel model: OpeningViewModel) {
         super.init()
         collectView = collect
         rootController = ctrl
+        viewModel = model
         
         collectView.dataSource = self
         collectView.delegate = self
@@ -45,6 +47,13 @@ class OpeningGameCollectionDataSource: CollectDataSource {
         rootController.moveNum.text = "Move: \(moveIndex + 1)"
         print("reloaded")
         collectView.reloadData()
+    }
+    
+    func configOpeningGame() {
+        viewModel.getData { jsonModels in
+            // set queried data to game
+            self.collectView.reloadData()
+        }
     }
     
     func chooseMove() {
