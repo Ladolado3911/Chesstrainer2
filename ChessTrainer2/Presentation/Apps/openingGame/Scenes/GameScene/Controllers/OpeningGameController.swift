@@ -7,8 +7,6 @@
 
 import UIKit
 
-typealias Collection = UICollectionViewDataSource & UICollectionViewDelegateFlowLayout
-
 class OpeningGameController: UIViewController {
 
     @IBOutlet weak var collectView: UICollectionView!

@@ -13,3 +13,4 @@ typealias Collect = UICollectionViewDataSource & UICollectionViewDelegateFlowLay
 typealias TableDataSource = Table & NSObject
 typealias CollectDataSource = Collect & NSObject
 
+
