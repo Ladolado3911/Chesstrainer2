@@ -14,7 +14,8 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     var rootController: OpeningGameController!
     var viewModel: OpeningViewModel!
     
-    var game: OpeningGame = OpeningGame(data: oneMoveOpenings)
+    var game: OpeningGame?
+
     var currentOpening: Opening?
     var currentMove: String?
     var moveChoices: [String]?
@@ -38,15 +39,19 @@ class OpeningGameCollectionDataSource: CollectDataSource {
         collectView.delegate = self
     }
     
+    
     func setInitialInfo() {
-        currentOpening = game.data[0]
-        currentMove = currentOpening!.moveSequence[0]
-        moveChoices = currentOpening!.generate6ChoiceFor(correctMove: currentMove!)
-        
-        rootController.openingName.text = currentOpening!.name
-        rootController.moveNum.text = "Move: \(moveIndex + 1)"
-        print("reloaded")
-        collectView.reloadData()
+        viewModel.getData {[self] openings in
+            game = OpeningGame(data: openings)
+            currentOpening = game!.data[0]
+            currentMove = currentOpening!.moveSequence[0]
+            moveChoices = currentOpening!.generate6ChoiceFor(correctMove: currentMove!)
+            
+            rootController.openingName.text = currentOpening!.name
+            rootController.moveNum.text = "Move: \(moveIndex + 1)"
+            print("reloaded")
+            collectView.reloadData()
+        }
     }
     
     func configOpeningGame() {
@@ -63,7 +68,7 @@ class OpeningGameCollectionDataSource: CollectDataSource {
             moveIndex = 0
             rootController.moveNum.text = "Move: \(moveIndex + 1)"
         }
-        if openingIndex >= game.openingsCount {
+        if openingIndex >= game!.openingsCount {
             openingIndex = 0
             moveIndex = 0
             rootController.moveNum.text = "Move: \(moveIndex + 1)"
@@ -72,7 +77,7 @@ class OpeningGameCollectionDataSource: CollectDataSource {
             rootController.dismiss(animated: true, completion: nil)
             return
         }
-        currentOpening = game.data[openingIndex]
+        currentOpening = game!.data[openingIndex]
         currentMove = currentOpening!.moveSequence[moveIndex]
         rootController.moveNum.text = "Move: \(moveIndex + 1)"
 

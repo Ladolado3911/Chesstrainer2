@@ -13,25 +13,3 @@ struct JsonOpening: Codable {
     var name: String?
     var moves: String?
 }
-
-
-struct JsonOpeningModel {
-    
-    var jsonOpening: JsonOpening
-    
-    init(with opening: JsonOpening) {
-        jsonOpening = opening
-    }
-    
-    var name: String {
-        jsonOpening.name ?? ""
-    }
-    
-    var moves: [String] {
-        let rawString = jsonOpening.moves ?? ""
-        return rawString.moves
-    }
-    
-    
-    
-}

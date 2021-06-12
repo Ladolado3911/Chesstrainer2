@@ -12,14 +12,14 @@ class OpeningParser {
     
     
     
-    func fetchData(completion: @escaping ([JsonOpeningModel]) -> Void) {
+    func fetchData(completion: @escaping ([Opening]) -> Void) {
         let path = Bundle.main.path(forResource: "eco", ofType: "json")
         let url = URL(fileURLWithPath: path!)
         
         do {
             let data = try Data(contentsOf: url)
             let openings = try JSONDecoder().decode([JsonOpening].self, from: data)
-            let result = openings.map { JsonOpeningModel(with: $0) }
+            let result = openings.map { Opening(with: $0) }
             completion(result)
             
         }

@@ -15,7 +15,7 @@ class Animator {
     
     func animateCell(isCorrect isRight: Bool, targetCell cell: UICollectionViewCell, completion: @escaping () -> Void) {
         cell.backgroundColor = isRight ? .green : .red
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             completion()
         }
     }

@@ -16,7 +16,7 @@ class OpeningViewModel {
         openingParser = parser
     }
     
-    func getData(completion: @escaping ([JsonOpeningModel])  -> Void) {
+    func getData(completion: @escaping ([Opening])  -> Void) {
         openingParser.fetchData { jsonModels in
             DispatchQueue.main.async {
                 completion(jsonModels)
