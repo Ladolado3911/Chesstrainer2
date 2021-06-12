@@ -29,6 +29,7 @@ class StartController: UIViewController {
 
     @IBAction func onStart(_ sender: Any) {
         openingGameController.modalPresentationStyle = .fullScreen
+        // set filters to openingGameController here
         present(openingGameController, animated: true)
     }
 }

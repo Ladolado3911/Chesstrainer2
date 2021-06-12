@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		24BA26062675046200A81F6C /* eco.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE29D752673DA5800F1D9D8 /* eco.json */; };
+		24BA260B267524B900A81F6C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA260A267524B900A81F6C /* MainViewModel.swift */; };
+		24BA260D2675255400A81F6C /* Distributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA260C2675255400A81F6C /* Distributor.swift */; };
 		3F5E26752663D90600100EBB /* intExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E26742663D90600100EBB /* intExtension.swift */; };
 		3F5E267A2663DE3100100EBB /* StatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E26792663DE3100100EBB /* StatsController.swift */; };
 		3F5F36FD2662D5EF00FCD034 /* Moves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F36FC2662D5EF00FCD034 /* Moves.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24BA260A267524B900A81F6C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		24BA260C2675255400A81F6C /* Distributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distributor.swift; sourceTree = "<group>"; };
 		3F5E26742663D90600100EBB /* intExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intExtension.swift; sourceTree = "<group>"; };
 		3F5E26792663DE3100100EBB /* StatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsController.swift; sourceTree = "<group>"; };
 		3F5F36FC2662D5EF00FCD034 /* Moves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moves.swift; sourceTree = "<group>"; };
@@ -102,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24BA26092675249D00A81F6C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				24BA260A267524B900A81F6C /* MainViewModel.swift */,
+				24BA260C2675255400A81F6C /* Distributor.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		3F6FB303265FCE6F00E41C41 = {
 			isa = PBXGroup;
 			children = (
@@ -347,7 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				ACE29D6D2673D12300F1D9D8 /* View */,
-				ACE29D6E2673D12A00F1D9D8 /* ViewModel */,
+				24BA26092675249D00A81F6C /* ViewModel */,
 				3F6FB329265FCE8900E41C41 /* MainControllers */,
 				3F6FB315265FCE7000E41C41 /* Main.storyboard */,
 			);
@@ -359,14 +372,6 @@
 			children = (
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		ACE29D6E2673D12A00F1D9D8 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ViewModel;
-			path = View/ViewModel;
 			sourceTree = "<group>";
 		};
 		ACE29D6F2673D15200F1D9D8 /* View */ = {
@@ -485,6 +490,7 @@
 				ACE29D7B2673DBE300F1D9D8 /* OpeningParser.swift in Sources */,
 				ACE29D722673D60C00F1D9D8 /* openingManager.swift in Sources */,
 				ACE29D7D2673DF3200F1D9D8 /* OpeningViewModel.swift in Sources */,
+				24BA260D2675255400A81F6C /* Distributor.swift in Sources */,
 				3F6C3354266CCA7F0070E83C /* Color+Extension.swift in Sources */,
 				3F6FB34A265FD16600E41C41 /* OpeningGame.swift in Sources */,
 				3F6C3351266CAB350070E83C /* TypeAliases.swift in Sources */,
@@ -495,6 +501,7 @@
 				3F6FB314265FCE7000E41C41 /* StartController.swift in Sources */,
 				3F6FB36F265FD47A00E41C41 /* GameHelpers.swift in Sources */,
 				3F6FB310265FCE7000E41C41 /* AppDelegate.swift in Sources */,
+				24BA260B267524B900A81F6C /* MainViewModel.swift in Sources */,
 				3F6FB346265FD0A500E41C41 /* OpeningGameController.swift in Sources */,
 				3F5E26752663D90600100EBB /* intExtension.swift in Sources */,
 				3F5F36FD2662D5EF00FCD034 /* Moves.swift in Sources */,

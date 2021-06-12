@@ -10,6 +10,14 @@ import UIKit
 
 class OpeningParser {
     
+    // filters
+    var openingNameFilter: String!
+    var difficultyFilter: Int!
+    
+    init(nameFilter name: String, difficultyFilter diff: Int) {
+        openingNameFilter = name
+        difficultyFilter = diff
+    }
     
     
     func fetchData(completion: @escaping ([Opening]) -> Void) {
@@ -19,7 +27,9 @@ class OpeningParser {
         do {
             let data = try Data(contentsOf: url)
             let openings = try JSONDecoder().decode([JsonOpening].self, from: data)
-            let result = openings.map { Opening(with: $0) }
+            let entireData = openings.map { Opening(with: $0) }
+            let filter1 = entireData.filter { $0.name.contains(openingNameFilter! ) }
+            let result = filter1.filter { $0.movesCount == difficultyFilter! }
             completion(result)
             
         }

@@ -41,6 +41,7 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     
     func setInitialInfo() {
         viewModel.getData {[self] openings in
+            // query openings here
             game = OpeningGame(data: openings)
             currentOpening = game!.data[0]
             currentMove = currentOpening!.moveSequence[0]
@@ -50,13 +51,6 @@ class OpeningGameCollectionDataSource: CollectDataSource {
             rootController.moveNum.text = "Move: \(moveIndex + 1)"
             print("reloaded")
             collectView.reloadData()
-        }
-    }
-    
-    func configOpeningGame() {
-        viewModel.getData { jsonModels in
-            // set queried data to game
-            self.collectView.reloadData()
         }
     }
     

@@ -17,6 +17,10 @@ class OpeningGameController: UIViewController {
     private var viewModel: OpeningViewModel!
     private var dataSource: OpeningGameCollectionDataSource!
     
+    // filters
+    var openingNameFilter: String?
+    var difficultyFilter: Int?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +33,7 @@ class OpeningGameController: UIViewController {
     }
     
     func configViewModel() {
-        openingParser = OpeningParser()
+        openingParser = OpeningParser(nameFilter: openingNameFilter!, difficultyFilter: difficultyFilter!)
         viewModel = OpeningViewModel(with: openingParser)
         dataSource = OpeningGameCollectionDataSource(collectView: collectView, controller: self, viewModel: viewModel)
     }
