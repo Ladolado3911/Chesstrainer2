@@ -39,7 +39,6 @@ class OpeningGameCollectionDataSource: CollectDataSource {
         collectView.delegate = self
     }
     
-    
     func setInitialInfo() {
         viewModel.getData {[self] openings in
             game = OpeningGame(data: openings)

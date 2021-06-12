@@ -130,8 +130,6 @@
 				ACE29D632673CCC100F1D9D8 /* Infrastructure */,
 				3F6FB355265FD26F00E41C41 /* Reusables */,
 				3F6FB32D265FCEAA00E41C41 /* Helpers */,
-				3F6FB329265FCE8900E41C41 /* MainControllers */,
-				3F6FB315265FCE7000E41C41 /* Main.storyboard */,
 				3F6FB31D265FCE7000E41C41 /* LaunchScreen.storyboard */,
 				3F6FB320265FCE7000E41C41 /* Info.plist */,
 				3F6FB318265FCE7000E41C41 /* ChessTrainer2.xcdatamodeld */,
@@ -350,6 +348,8 @@
 			children = (
 				ACE29D6D2673D12300F1D9D8 /* View */,
 				ACE29D6E2673D12A00F1D9D8 /* ViewModel */,
+				3F6FB329265FCE8900E41C41 /* MainControllers */,
+				3F6FB315265FCE7000E41C41 /* Main.storyboard */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";
@@ -365,7 +365,8 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = ViewModel;
+			name = ViewModel;
+			path = View/ViewModel;
 			sourceTree = "<group>";
 		};
 		ACE29D6F2673D15200F1D9D8 /* View */ = {
