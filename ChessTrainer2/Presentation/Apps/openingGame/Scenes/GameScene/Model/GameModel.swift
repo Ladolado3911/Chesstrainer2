@@ -31,4 +31,7 @@ struct JsonOpeningModel {
         let rawString = jsonOpening.moves ?? ""
         return rawString.moves
     }
+    
+    
+    
 }
