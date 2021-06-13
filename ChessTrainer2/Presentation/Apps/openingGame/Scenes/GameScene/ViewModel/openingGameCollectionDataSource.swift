@@ -82,7 +82,8 @@ class OpeningGameCollectionDataSource: CollectDataSource {
             rootController.openingStats.text = "Openings: \(correctOpeningCount) / \(game!.data.count)"
             rootController.moveNum.text = "Move: \(moveIndex + 1)"
             print("time to quit")
-            rootController.dismiss(animated: true, completion: nil)
+            //rootController.dismiss(animated: true, completion: nil)
+            popController(from: rootController, method: .withBackItem)
             return
         }
         currentOpening = game!.data[openingIndex]
@@ -147,7 +148,7 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.bounds.width - 20) / 2
+        let width = (collectionView.bounds.width - 75) / 2
         let height = width
 //        let height = (collectionView.bounds.height - 40) / 3
 //        let width = height

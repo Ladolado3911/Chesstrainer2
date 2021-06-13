@@ -31,13 +31,14 @@ class OpeningGameController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController!.navigationBar.prefersLargeTitles = false
         configViewModel()
         dataSource.setInitialInfo()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        //dataSource.resetGame()
+        navigationController!.navigationBar.prefersLargeTitles = true
     }
     
     func configViewModel() {

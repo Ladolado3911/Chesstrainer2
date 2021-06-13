@@ -38,10 +38,11 @@ class StartController: UIViewController {
     }
 
     @IBAction func onStart(_ sender: Any) {
-        openingGameController.modalPresentationStyle = .fullScreen
+        //openingGameController.modalPresentationStyle = .none
         // set filters to openingGameController here
         openingGameController.filters = mainViewModel.getFilters()
-        present(openingGameController, animated: true)
+        pushController(from: self, to: openingGameController, method: .withBackItem)
+        //present(openingGameController, animated: true)
     }
 }
 
