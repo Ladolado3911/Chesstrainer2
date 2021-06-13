@@ -20,6 +20,10 @@ class MainViewModel: PickerView {
     var openingPicker: UIPickerView!
     var difficultyPicker: UIPickerView!
     
+    lazy var openings: [String] = {
+        openingParser.uniqueOpeningNames
+    }()
+    
     init(distributor object: DataDistributor,
          openingParser parser: OpeningParser,
          openingPicker picker1: UIPickerView,
@@ -36,33 +40,40 @@ class MainViewModel: PickerView {
 
     func configPickers() {
         openingPicker.dataSource = self
+        openingPicker.delegate = self
+        openingPicker.tag = 1
+        
         difficultyPicker.dataSource = self
+        difficultyPicker.delegate = self
+        difficultyPicker.tag = 2
     }
     
+    func getFilters() -> Filter {
+        let nameFilter = openings[openingPicker.selectedRow(inComponent: 0)]
+        let difficultyFilter = difficultyPicker.selectedRow(inComponent: 0) + 3
+        
+        return Filter(nameFilter: nameFilter, difficultyFilter: difficultyFilter)
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        2
+        1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        switch component {
-        case 0:
-            return openingParser.uniqueOpeningNames.count
-        case 1:
-            return 5
-        default:
-            return 0
+        if pickerView.tag == 1 {
+            return openings.count
+        }
+        else {
+            return 15
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch component {
-        case 0:
-            return "1"
-        case 1:
-            return "2"
-        default:
-            return "break"
+        if pickerView.tag == 1 {
+            return openings[row]
+        }
+        else {
+            return "Level \(row + 1)"
         }
     }
 }

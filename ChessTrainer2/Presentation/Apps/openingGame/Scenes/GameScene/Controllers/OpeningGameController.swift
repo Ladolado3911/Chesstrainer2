@@ -19,22 +19,27 @@ class OpeningGameController: UIViewController {
     private var dataSource: OpeningGameCollectionDataSource!
     
     // filters
-    var openingNameFilter: String?
-    var difficultyFilter: Int?
+    var filters: Filter?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configViewModel()
+        //configViewModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        configViewModel()
         dataSource.setInitialInfo()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        dataSource.resetGame()
+    }
+    
     func configViewModel() {
-        openingFilter = OpeningFilter(nameFilter: openingNameFilter!, difficultyFilter: difficultyFilter!)
+        openingFilter = OpeningFilter(nameFilter: filters!.nameFilter, difficultyFilter: filters!.difficultyFilter)
         openingParser = OpeningParser()
         viewModel = OpeningViewModel(with: openingFilter, with2: openingParser)
         dataSource = OpeningGameCollectionDataSource(collectView: collectView, controller: self, viewModel: viewModel)

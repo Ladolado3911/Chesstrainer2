@@ -40,7 +40,7 @@
 		3F6FB367265FD2B400E41C41 /* TestOpenings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6FB366265FD2B400E41C41 /* TestOpenings.swift */; };
 		3F6FB36B265FD33900E41C41 /* testExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6FB36A265FD33900E41C41 /* testExtension.swift */; };
 		3F6FB36F265FD47A00E41C41 /* GameHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6FB36E265FD47A00E41C41 /* GameHelpers.swift */; };
-		3F6FB372265FD5AC00E41C41 /* Opening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6FB371265FD5AB00E41C41 /* Opening.swift */; };
+		3F6FB372265FD5AC00E41C41 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6FB371265FD5AB00E41C41 /* Filter.swift */; };
 		3F6FB376265FDCB500E41C41 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6FB375265FDCB500E41C41 /* AnswerCell.swift */; };
 		ACE29D672673CDDB00F1D9D8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE29D662673CDDB00F1D9D8 /* NetworkManager.swift */; };
 		ACE29D722673D60C00F1D9D8 /* openingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE29D712673D60C00F1D9D8 /* openingManager.swift */; };
@@ -86,7 +86,7 @@
 		3F6FB366265FD2B400E41C41 /* TestOpenings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOpenings.swift; sourceTree = "<group>"; };
 		3F6FB36A265FD33900E41C41 /* testExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testExtension.swift; sourceTree = "<group>"; };
 		3F6FB36E265FD47A00E41C41 /* GameHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelpers.swift; sourceTree = "<group>"; };
-		3F6FB371265FD5AB00E41C41 /* Opening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opening.swift; sourceTree = "<group>"; };
+		3F6FB371265FD5AB00E41C41 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		3F6FB375265FDCB500E41C41 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
 		ACE29D662673CDDB00F1D9D8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		ACE29D712673D60C00F1D9D8 /* openingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openingManager.swift; sourceTree = "<group>"; };
@@ -402,7 +402,7 @@
 			children = (
 				3F6FB349265FD16600E41C41 /* OpeningGame.swift */,
 				3F6FB366265FD2B400E41C41 /* TestOpenings.swift */,
-				3F6FB371265FD5AB00E41C41 /* Opening.swift */,
+				3F6FB371265FD5AB00E41C41 /* Filter.swift */,
 				3F5F36FC2662D5EF00FCD034 /* Moves.swift */,
 			);
 			path = Structure;
@@ -492,7 +492,7 @@
 				3F6C3362266CEECB0070E83C /* Animator.swift in Sources */,
 				3F6FB362265FD26F00E41C41 /* GeneralStyleLabel.swift in Sources */,
 				3F5E267A2663DE3100100EBB /* StatsController.swift in Sources */,
-				3F6FB372265FD5AC00E41C41 /* Opening.swift in Sources */,
+				3F6FB372265FD5AC00E41C41 /* Filter.swift in Sources */,
 				ACE29D7B2673DBE300F1D9D8 /* OpeningFilter.swift in Sources */,
 				ACE29D722673D60C00F1D9D8 /* openingManager.swift in Sources */,
 				ACE29D7D2673DF3200F1D9D8 /* OpeningViewModel.swift in Sources */,
