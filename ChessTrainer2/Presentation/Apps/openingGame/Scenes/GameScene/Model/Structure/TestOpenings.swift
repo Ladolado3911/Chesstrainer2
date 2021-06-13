@@ -13,7 +13,7 @@ import UIKit
 //                       Opening(name: "Queen's Pawn Opening", moveSequence: ["d4"])]
 
 struct Opening {
-    
+
     var jsonOpening: JsonOpening
     var name: String {
         jsonOpening.name ?? ""

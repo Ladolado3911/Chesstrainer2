@@ -55,6 +55,18 @@ class OpeningParser {
         difficultyFilter = diff
     }
     
+    func madeUnique(input arr: [Opening]) -> [Opening] {
+        var tempDict: [String: Opening] = [:]
+        var result: [Opening] = []
+        for a in arr {
+            tempDict[a.name] = a
+        }
+        for (_, opening) in tempDict {
+            result.append(opening)
+        }
+        return result
+    }
+    
     
     func fetchData(completion: @escaping ([Opening]) -> Void) {
         let path = Bundle.main.path(forResource: "eco", ofType: "json")
@@ -65,8 +77,13 @@ class OpeningParser {
             let openings = try JSONDecoder().decode([JsonOpening].self, from: data)
             let entireData = openings.map { Opening(with: $0) }
             let filter1 = entireData.filter { $0.name.contains(openingNameFilter!) }
-            let result = filter1.filter { $0.movesCount <= difficultyFilter! && $0.movesCount >= difficultyFilter! - 2 }
-            completion(result)
+            let filter2 = filter1.filter { $0.movesCount <= difficultyFilter! && $0.movesCount >= difficultyFilter! - 2 }
+            
+            var result: [Opening] = []
+            for _ in 0..<4 {
+                result.append(filter2.randomElement()!)
+            }
+            completion(madeUnique(input: result))
             
         }
         catch {
@@ -76,8 +93,9 @@ class OpeningParser {
 }
 
 
-let parser = OpeningParser(nameFilter: "Alekhine Defense:", difficultyFilter: 7)
+let parser = OpeningParser(nameFilter: "Alekhine Defense:", difficultyFilter: 3)
 parser.fetchData { data in
     data.map { print($0.name) }
+    data.map { print($0.moveSequence) }
     print(data.count)
 }
