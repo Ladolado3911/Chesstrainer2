@@ -10,14 +10,16 @@ import UIKit
 
 class OpeningViewModel {
     
+    var openingFilter: OpeningFilter!
     var openingParser: OpeningParser!
     
-    init(with parser: OpeningParser) {
+    init(with filter: OpeningFilter, with2 parser: OpeningParser) {
+        openingFilter = filter
         openingParser = parser
     }
     
     func getData(completion: @escaping ([Opening])  -> Void) {
-        openingParser.fetchData { jsonModels in
+        openingFilter.fetchData { jsonModels in
             DispatchQueue.main.async {
                 completion(jsonModels)
             }

@@ -15,5 +15,8 @@ class GeneralStyleLabel: UILabel {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        
+        font = UIFont(name: "Helvetica Neue Bold", size: 22)
+        
     }
 }

@@ -15,5 +15,6 @@ typealias Table = UITableViewDataSource & UITableViewDelegate
 typealias Collect = UICollectionViewDataSource & UICollectionViewDelegateFlowLayout
 typealias TableDataSource = Table & NSObject
 typealias CollectDataSource = Collect & NSObject
+typealias PickerView = UIPickerViewDataSource & UIPickerViewDelegate & NSObject
 
 

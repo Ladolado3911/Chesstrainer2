@@ -13,6 +13,7 @@ class OpeningGameController: UIViewController {
     @IBOutlet weak var openingName: UILabel!
     @IBOutlet weak var moveNum: UILabel!
     
+    private var openingFilter: OpeningFilter!
     private var openingParser: OpeningParser!
     private var viewModel: OpeningViewModel!
     private var dataSource: OpeningGameCollectionDataSource!
@@ -33,8 +34,9 @@ class OpeningGameController: UIViewController {
     }
     
     func configViewModel() {
-        openingParser = OpeningParser(nameFilter: openingNameFilter!, difficultyFilter: difficultyFilter!)
-        viewModel = OpeningViewModel(with: openingParser)
+        openingFilter = OpeningFilter(nameFilter: openingNameFilter!, difficultyFilter: difficultyFilter!)
+        openingParser = OpeningParser()
+        viewModel = OpeningViewModel(with: openingFilter, with2: openingParser)
         dataSource = OpeningGameCollectionDataSource(collectView: collectView, controller: self, viewModel: viewModel)
     }
 }

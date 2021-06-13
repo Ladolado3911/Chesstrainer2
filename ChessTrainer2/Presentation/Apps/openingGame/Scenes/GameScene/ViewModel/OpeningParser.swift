@@ -2,25 +2,38 @@
 //  OpeningParser.swift
 //  ChessTrainer2
 //
-//  Created by Guest User on 6/11/21.
+//  Created by lado tsivtsivadze on 6/13/21.
 //
 
 import Foundation
 import UIKit
 
+
 class OpeningParser {
     
-    // filters
-    var openingNameFilter: String!
-    var difficultyFilter: Int!
-    
-    init(nameFilter name: String, difficultyFilter diff: Int) {
-        openingNameFilter = name
-        difficultyFilter = diff
+    var uniqueOpeningNames: [String] {
+        var result: [String] = []
+        var tempDict: [String: String] = [:]
+        let datta = fetchData()
+        datta!.map {
+            let name = $0.name
+            let tempString = String(name.split(separator: ":")[0])
+            
+            if tempString.contains(",") {
+                let newString = String(tempString.split(separator: ",")[0])
+                tempDict[newString] = ""
+            }
+            else {
+                tempDict[tempString] = ""
+            }
+        }
+        for (key, _) in tempDict {
+            result.append(key)
+        }
+        return result.sorted { $0 < $1 }
     }
     
-    
-    func fetchData(completion: @escaping ([Opening]) -> Void) {
+    func fetchData() -> [Opening]? {
         let path = Bundle.main.path(forResource: "eco", ofType: "json")
         let url = URL(fileURLWithPath: path!)
         
@@ -28,13 +41,14 @@ class OpeningParser {
             let data = try Data(contentsOf: url)
             let openings = try JSONDecoder().decode([JsonOpening].self, from: data)
             let entireData = openings.map { Opening(with: $0) }
-            let filter1 = entireData.filter { $0.name.contains(openingNameFilter! ) }
-            let result = filter1.filter { $0.movesCount == difficultyFilter! }
-            completion(result)
+            
+            return entireData
             
         }
         catch {
             print("Could not get data")
+            return nil
         }
     }
 }
+
