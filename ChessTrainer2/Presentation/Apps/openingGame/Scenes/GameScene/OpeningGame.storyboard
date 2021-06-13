@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -20,6 +20,18 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4d-uK-6W7">
                                 <rect key="frame" x="20" y="64" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q07-Xy-q9q">
+                                <rect key="frame" x="20" y="104" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLw-C1-r1E">
+                                <rect key="frame" x="352" y="104" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -43,12 +55,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q07-Xy-q9q">
-                                <rect key="frame" x="186" y="104" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jhU-JF-8Ov"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -57,17 +63,21 @@
                             <constraint firstItem="q07-Xy-q9q" firstAttribute="top" secondItem="r4d-uK-6W7" secondAttribute="bottom" constant="10" id="6IJ-Bs-7n3"/>
                             <constraint firstItem="jhU-JF-8Ov" firstAttribute="trailing" secondItem="8c1-X8-9IB" secondAttribute="trailing" constant="20" id="J3n-Dj-ACF"/>
                             <constraint firstItem="r4d-uK-6W7" firstAttribute="top" secondItem="jhU-JF-8Ov" secondAttribute="top" constant="20" id="K2S-ZB-MRU"/>
+                            <constraint firstItem="q07-Xy-q9q" firstAttribute="leading" secondItem="jhU-JF-8Ov" secondAttribute="leading" constant="20" id="LhP-4c-jjI"/>
                             <constraint firstItem="8c1-X8-9IB" firstAttribute="leading" secondItem="jhU-JF-8Ov" secondAttribute="leading" constant="20" id="R1f-Oa-pwX"/>
+                            <constraint firstItem="dLw-C1-r1E" firstAttribute="bottom" secondItem="q07-Xy-q9q" secondAttribute="bottom" id="VdY-yW-ApH"/>
+                            <constraint firstItem="dLw-C1-r1E" firstAttribute="top" secondItem="q07-Xy-q9q" secondAttribute="top" id="axf-gU-khH"/>
                             <constraint firstItem="8c1-X8-9IB" firstAttribute="top" secondItem="q07-Xy-q9q" secondAttribute="bottom" constant="10" id="fOv-Vf-LMe"/>
                             <constraint firstItem="jhU-JF-8Ov" firstAttribute="bottom" secondItem="8c1-X8-9IB" secondAttribute="bottom" constant="20" id="gRm-Yd-CcT"/>
                             <constraint firstItem="jhU-JF-8Ov" firstAttribute="trailing" secondItem="r4d-uK-6W7" secondAttribute="trailing" constant="20" id="hog-4a-44s"/>
-                            <constraint firstItem="q07-Xy-q9q" firstAttribute="centerX" secondItem="0zr-vi-I0P" secondAttribute="centerX" id="t5g-AX-Yfh"/>
+                            <constraint firstItem="jhU-JF-8Ov" firstAttribute="trailing" secondItem="dLw-C1-r1E" secondAttribute="trailing" constant="20" id="zP3-RY-Ye3"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectView" destination="8c1-X8-9IB" id="MFO-wD-nPq"/>
                         <outlet property="moveNum" destination="q07-Xy-q9q" id="hIF-RK-z1w"/>
                         <outlet property="openingName" destination="r4d-uK-6W7" id="my1-yn-fiP"/>
+                        <outlet property="stats" destination="dLw-C1-r1E" id="T1I-n2-4hV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ad-Lt-8Kf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

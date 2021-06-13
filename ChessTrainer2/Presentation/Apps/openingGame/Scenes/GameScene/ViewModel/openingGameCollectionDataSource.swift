@@ -23,10 +23,13 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     
     var moveIndex: Int = 0
     var openingIndex: Int = 0
-    var isCorrect: Bool = false
+    var isCorrectMove: Bool = false
     
     var color1 = ProjectColors.purple
     var color2 = ProjectColors.white
+    
+    var correctMoveCount: Int = 0
+    var correctOpeningCount: Int = 0
 //    var correctCount: Int = 0
     
     init(collectView collect: UICollectionView, controller ctrl: OpeningGameController, viewModel model: OpeningViewModel) {
@@ -59,11 +62,19 @@ class OpeningGameCollectionDataSource: CollectDataSource {
         if moveIndex >= currentOpening!.movesCount {
             openingIndex += 1
             moveIndex = 0
+            
+            if correctMoveCount == currentOpening!.movesCount {
+                correctOpeningCount += 1
+            }
+            
+            correctMoveCount = 0
             rootController.moveNum.text = "Move: \(moveIndex + 1)"
         }
         if openingIndex >= game!.openingsCount {
             openingIndex = 0
             moveIndex = 0
+            correctMoveCount = 0
+            correctOpeningCount = 0
             rootController.moveNum.text = "Move: \(moveIndex + 1)"
 //            correctCount = 0
             print("time to quit")
@@ -80,7 +91,7 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     }
     
     func checkMove(chosenMove move: String) {
-        isCorrect = move == currentMove ? true : false
+        isCorrectMove = move == currentMove ? true : false
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -118,8 +129,12 @@ class OpeningGameCollectionDataSource: CollectDataSource {
         let cell = collectionView.cellForItem(at: indexPath)
         chosenMove = moveChoices![indexPath.row]
         checkMove(chosenMove: chosenMove!)
+        
+        if isCorrectMove {
+            correctMoveCount += 1
+        }
 
-        Animator.shared.animateCell(isCorrect: isCorrect, targetCell: cell!) {
+        Animator.shared.animateCell(isCorrect: isCorrectMove, targetCell: cell!) {
             self.chooseMove()
         }
     }
