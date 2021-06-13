@@ -44,7 +44,7 @@ struct Opening {
     }
 }
 
-class OpeningParser {
+class OpeningFilter {
     
     // filters
     var openingNameFilter: String!
@@ -93,9 +93,57 @@ class OpeningParser {
 }
 
 
-let parser = OpeningParser(nameFilter: "Alekhine Defense:", difficultyFilter: 3)
-parser.fetchData { data in
-    data.map { print($0.name) }
-    data.map { print($0.moveSequence) }
-    print(data.count)
+class OpeningParser {
+    
+    func fetchData() -> [Opening]? {
+        let path = Bundle.main.path(forResource: "eco", ofType: "json")
+        let url = URL(fileURLWithPath: path!)
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let openings = try JSONDecoder().decode([JsonOpening].self, from: data)
+            let entireData = openings.map { Opening(with: $0) }
+            
+            return entireData
+            
+        }
+        catch {
+            print("Could not get data")
+            return nil
+        }
+    }
+    
+    func getUniqueOpeningNames() -> [String] {
+        var result: [String] = []
+        fetchData()!.map {
+            let index = $0.name.firstIndex(of: ":")
+            let tempString = $0.name.prefix(upTo: index!)
+            result.append(String(tempString))
+        }
+        return result
+    }
 }
+
+let parser2 = OpeningParser()
+for a in parser2.getUniqueOpeningNames() {
+    print(a)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//let parser = OpeningFilter(nameFilter: " ", difficultyFilter: 3)
+//parser.fetchData { data in
+//    data.map { print($0.name) }
+//    data.map { print($0.moveSequence) }
+//    print(data.count)
+//}
