@@ -51,6 +51,8 @@ class OpeningGameCollectionDataSource: CollectDataSource {
             moveChoices = currentOpening!.generate6ChoiceFor(correctMove: currentMove!)
             
             rootController.openingName.text = currentOpening!.name
+            rootController.stats.text = "Moves: \(correctMoveCount) / \(currentOpening!.movesCount)"
+            rootController.openingStats.text = "Openings: \(correctOpeningCount) / \(game!.data.count)"
             rootController.moveNum.text = "Move: \(moveIndex + 1)"
             print("reloaded")
             collectView.reloadData()
@@ -66,8 +68,9 @@ class OpeningGameCollectionDataSource: CollectDataSource {
             if correctMoveCount == currentOpening!.movesCount {
                 correctOpeningCount += 1
             }
-            
             correctMoveCount = 0
+            rootController.stats.text = "Moves: \(correctMoveCount) / \(currentOpening!.movesCount)"
+            rootController.openingStats.text = "Openings: \(correctOpeningCount) / \(game!.data.count)"
             rootController.moveNum.text = "Move: \(moveIndex + 1)"
         }
         if openingIndex >= game!.openingsCount {
@@ -75,14 +78,18 @@ class OpeningGameCollectionDataSource: CollectDataSource {
             moveIndex = 0
             correctMoveCount = 0
             correctOpeningCount = 0
+            rootController.stats.text = "Moves: \(correctMoveCount) / \(currentOpening!.movesCount)"
+            rootController.openingStats.text = "Openings: \(correctOpeningCount) / \(game!.data.count)"
             rootController.moveNum.text = "Move: \(moveIndex + 1)"
-//            correctCount = 0
             print("time to quit")
             rootController.dismiss(animated: true, completion: nil)
             return
         }
         currentOpening = game!.data[openingIndex]
         currentMove = currentOpening!.moveSequence[moveIndex]
+        
+        rootController.stats.text = "Moves: \(correctMoveCount) / \(currentOpening!.movesCount)"
+        rootController.openingStats.text = "Openings: \(correctOpeningCount) / \(game!.data.count)"
         rootController.moveNum.text = "Move: \(moveIndex + 1)"
 
         moveChoices = currentOpening!.generate6ChoiceFor(correctMove: currentMove!)

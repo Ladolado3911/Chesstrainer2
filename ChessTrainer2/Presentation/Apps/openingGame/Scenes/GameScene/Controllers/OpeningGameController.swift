@@ -13,6 +13,7 @@ class OpeningGameController: UIViewController {
     @IBOutlet weak var openingName: UILabel!
     @IBOutlet weak var moveNum: UILabel!
     @IBOutlet weak var stats: UILabel!
+    @IBOutlet weak var openingStats: UILabel!
     
     private var openingFilter: OpeningFilter!
     private var openingParser: OpeningParser!
