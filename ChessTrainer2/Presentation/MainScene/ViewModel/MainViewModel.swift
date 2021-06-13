@@ -64,7 +64,7 @@ class MainViewModel: PickerView {
             return openings.count
         }
         else {
-            return 15
+            return 5
         }
     }
     

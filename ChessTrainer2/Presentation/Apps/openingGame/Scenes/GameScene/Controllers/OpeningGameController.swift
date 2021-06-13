@@ -35,7 +35,7 @@ class OpeningGameController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        dataSource.resetGame()
+        //dataSource.resetGame()
     }
     
     func configViewModel() {
