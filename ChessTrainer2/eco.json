@@ -6,19 +6,19 @@
     "moves": "1. e4 Nf6"
   },
   {
-    "name": "Alekhine Defense, 2. e5 Nd5 3. d4",
+    "name": "Alekhine Defense",
     "eco": "B03",
     "fen": "rnbqkb1r/pppppppp/8/3nP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq",
     "moves": "1. e4 Nf6 2. e5 Nd5 3. d4"
   },
   {
-    "name": "Alekhine Defense, 2. e5 Nd5 3. d4 d6",
+    "name": "Alekhine Defense",
     "eco": "B03",
     "fen": "rnbqkb1r/ppp1pppp/3p4/3nP3/3P4/8/PPP2PPP/RNBQKBNR w KQkq",
     "moves": "1. e4 Nf6 2. e5 Nd5 3. d4 d6"
   },
   {
-    "name": "Alekhine Defense, 3. d4 d6 4. c4",
+    "name": "Alekhine Defense",
     "eco": "B03",
     "fen": "rnbqkb1r/ppp1pppp/3p4/3nP3/2PP4/8/PP3PPP/RNBQKBNR b KQkq",
     "moves": "1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. c4"
@@ -66,7 +66,7 @@
     "moves": "1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. c4 Nb6 5. f4"
   },
   {
-    "name": "Alekhine Defense: Four Pawns Attack, 6... Nc6",
+    "name": "Alekhine Defense: Four Pawns Attack",
     "eco": "B03",
     "fen": "r1bqkb1r/ppp1pppp/1nn5/4P3/2PP4/8/PP4PP/RNBQKBNR w KQkq",
     "moves": "1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. c4 Nb6 5. f4 dxe5 6. fxe5 Nc6"
@@ -408,7 +408,7 @@
     "moves": "1. f3 f5 2. e4 fxe4 3. Nc3"
   },
   {
-    "name": "Barnes Opening: Gedult Gambit, 3. d4 dxe4 4. c3",
+    "name": "Barnes Opening: Gedult Gambit",
     "eco": "A00",
     "fen": "rnbqkbnr/ppp1pp1p/6p1/8/3Pp3/2P2P2/PP4PP/RNBQKBNR b KQkq",
     "moves": "1. f3 d5 2. e4 g6 3. d4 dxe4 4. c3"
@@ -432,7 +432,7 @@
     "moves": "1. d4 Nf6 2. c4 c5 3. d5 b5"
   },
   {
-    "name": "Benko Gambit, 8. Kxf1 d6 9. g3",
+    "name": "Benko Gambit",
     "eco": "A59",
     "fen": "rn1qkb1r/4pp1p/3p1np1/2pP4/4P3/2N3P1/PP3P1P/R1BQ1KNR b kq",
     "moves": "1. d4 Nf6 2. c4 c5 3. d5 b5 4. cxb5 a6 5. bxa6 g6 6. Nc3 Bxa6 7. e4 Bxf1 8. Kxf1 d6 9. g3"
@@ -576,7 +576,7 @@
     "moves": "1. d4 Nf6 2. c4 c5"
   },
   {
-    "name": "Benoni Defense, 5. cxd5 d6 6. Nc3 g6",
+    "name": "Benoni Defense",
     "eco": "A61",
     "fen": "rnbqkb1r/pp3p1p/3p1np1/2pP4/8/2N2N2/PP2PPPP/R1BQKB1R w KQkq",
     "moves": "1. d4 Nf6 2. c4 e6 3. Nf3 c5 4. d5 exd5 5. cxd5 d6 6. Nc3 g6"
@@ -636,13 +636,13 @@
     "moves": "1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8. Be2 O-O 9. O-O Re8"
   },
   {
-    "name": "Benoni Defense: Classical Variation, Czerniak Defense, 9. O-O Re8 10. Nd2 Na6",
+    "name": "Benoni Defense: Classical Variation, Czerniak Defense",
     "eco": "A78",
     "fen": "r1bqr1k1/pp3pbp/n2p1np1/2pP4/4P3/2N5/PP1NBPPP/R1BQ1RK1 w -",
     "moves": "1. d4 Nf6 2. c4 e6 3. Nf3 c5 4. d5 exd5 5. cxd5 d6 6. Nc3 g6 7. e4 Bg7 8. Be2 O-O 9. O-O Re8 10. Nd2 Na6"
   },
   {
-    "name": "Benoni Defense: Classical Variation, Czerniak Defense, 10. Nd2 Na6 11. f3",
+    "name": "Benoni Defense: Classical Variation, Czerniak Defense",
     "eco": "A79",
     "fen": "r1bqr1k1/pp3pbp/n2p1np1/2pP4/4P3/2N2P2/PP1NB1PP/R1BQ1RK1 b -",
     "moves": "1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8. Be2 O-O 9. O-O Re8 10. Nd2 Na6 11. f3"
@@ -702,7 +702,7 @@
     "moves": "1. d4 Nf6 2. c4 e6 3. Nf3 c5 4. d5 exd5 5. cxd5 d6 6. Nc3 g6 7. g3"
   },
   {
-    "name": "Benoni Defense: Fianchetto Variation, 7. Bg2 Bg7 8. Nf3 O-O",
+    "name": "Benoni Defense: Fianchetto Variation",
     "eco": "A62",
     "fen": "rnbq1rk1/pp3pbp/3p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQK2R w KQ",
     "moves": "1. d4 Nf6 2. c4 e6 3. g3 c5 4. d5 exd5 5. cxd5 d6 6. Nc3 g6 7. Bg2 Bg7 8. Nf3 O-O"
@@ -1104,7 +1104,7 @@
     "moves": "1. e4 e5 2. Bc4 Bc5 3. c3 d5"
   },
   {
-    "name": "Bishop's Opening: Lewis Countergambit, 3. c3 d5 4. Bxd5 Nf6",
+    "name": "Bishop's Opening: Lewis Countergambit",
     "eco": "C23",
     "fen": "rnbqk2r/ppp2ppp/5n2/2bBp3/4P3/2P5/PP1P1PPP/RNBQK1NR w KQkq",
     "moves": "1. e4 e5 2. Bc4 Bc5 3. c3 d5 4. Bxd5 Nf6"

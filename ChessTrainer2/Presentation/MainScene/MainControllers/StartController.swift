@@ -11,6 +11,10 @@ class StartController: UIViewController {
 
     @IBOutlet weak var start: UIButton!
     
+    
+    
+    
+    
     lazy var openingGameController: OpeningGameController = {
         let vc = getController(storyboardID: .openingGame, controllerID: .openingGameController) as? OpeningGameController
         return vc!

@@ -6,9 +6,78 @@ extension String {
     }
 }
 
+struct JsonOpening: Codable {
+    var name: String?
+    var moves: String?
+}
 
 
-let rawString = "1. e4 Nf6 2. e5 Nd5 3. d4"
-let moves = rawString.moves
+struct Opening {
+    
+    var jsonOpening: JsonOpening
+    var name: String {
+        jsonOpening.name ?? ""
+    }
+    var moveSequence: [String] {
+        (jsonOpening.moves ?? "").moves
+    }
+    
+    var movesCount: Int {
+        return moveSequence.count
+    }
 
-print(moves)
+    init(with opening: JsonOpening) {
+        jsonOpening = opening
+    }
+
+    func generate6ChoiceFor(correctMove move: String) -> [String] {
+        var moves2: [String] = []
+        var temp = Moves.moves
+        if temp.contains(move) {
+            temp = temp.filter { $0 != move }
+        }
+        for _ in 0..<5 {
+            moves2.append(temp.randomElement()!)
+        }
+        moves2.append(move)
+        return moves2.shuffled()
+    }
+}
+
+class OpeningParser {
+    
+    // filters
+    var openingNameFilter: String!
+    var difficultyFilter: Int!
+    
+    init(nameFilter name: String, difficultyFilter diff: Int) {
+        openingNameFilter = name
+        difficultyFilter = diff
+    }
+    
+    
+    func fetchData(completion: @escaping ([Opening]) -> Void) {
+        let path = Bundle.main.path(forResource: "eco", ofType: "json")
+        let url = URL(fileURLWithPath: path!)
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let openings = try JSONDecoder().decode([JsonOpening].self, from: data)
+            let entireData = openings.map { Opening(with: $0) }
+            let filter1 = entireData.filter { $0.name.contains(openingNameFilter!) }
+            let result = filter1.filter { $0.movesCount <= difficultyFilter! && $0.movesCount >= difficultyFilter! - 2 }
+            completion(result)
+            
+        }
+        catch {
+            print("Could not get data")
+        }
+    }
+}
+
+
+let parser = OpeningParser(nameFilter: "Alekhine Defense:", difficultyFilter: 7)
+parser.fetchData { data in
+    data.map { print($0.name) }
+    print(data.count)
+}

@@ -134,6 +134,7 @@
 		3F6FB30E265FCE7000E41C41 /* ChessTrainer2 */ = {
 			isa = PBXGroup;
 			children = (
+				3F6FB315265FCE7000E41C41 /* Main.storyboard */,
 				ACE29D752673DA5800F1D9D8 /* eco.json */,
 				3F6FB31B265FCE7000E41C41 /* Assets.xcassets */,
 				ACE29D5F2673CC9600F1D9D8 /* App */,
@@ -362,7 +363,6 @@
 				ACE29D6D2673D12300F1D9D8 /* View */,
 				24BA26092675249D00A81F6C /* ViewModel */,
 				3F6FB329265FCE8900E41C41 /* MainControllers */,
-				3F6FB315265FCE7000E41C41 /* Main.storyboard */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";
@@ -522,7 +522,8 @@
 				3F6FB316265FCE7000E41C41 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
+			path = /Users/ladotsivtsivadze/Desktop/Chesstrainer2/ChessTrainer2;
+			sourceTree = "<absolute>";
 		};
 		3F6FB31D265FCE7000E41C41 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -663,7 +664,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lado.ChessTrainer22;
+				PRODUCT_BUNDLE_IDENTIFIER = lado.ChessTrainer2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -682,7 +683,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lado.ChessTrainer22;
+				PRODUCT_BUNDLE_IDENTIFIER = lado.ChessTrainer2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
