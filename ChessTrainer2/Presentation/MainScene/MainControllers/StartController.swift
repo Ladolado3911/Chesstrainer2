@@ -38,11 +38,13 @@ class StartController: UIViewController {
     }
 
     @IBAction func onStart(_ sender: Any) {
-        //openingGameController.modalPresentationStyle = .none
-        // set filters to openingGameController here
-        openingGameController.filters = mainViewModel.getFilters()
-        pushController(from: self, to: openingGameController, method: .withBackItem)
-        //present(openingGameController, animated: true)
+        navigationController!.navigationBar.isHidden = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.openingGameController.filters = self.mainViewModel.getFilters()
+            pushController(from: self, to: self.openingGameController, method: .withBackItem)
+        }
+//        openingGameController.filters = mainViewModel.getFilters()
+//        pushController(from: self, to: openingGameController, method: .withBackItem)
     }
 }
 

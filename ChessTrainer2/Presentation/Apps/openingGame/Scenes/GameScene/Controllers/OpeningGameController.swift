@@ -22,7 +22,6 @@ class OpeningGameController: UIViewController {
     
     // filters
     var filters: Filter?
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +30,14 @@ class OpeningGameController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController!.navigationBar.prefersLargeTitles = false
+ 
         configViewModel()
         dataSource.setInitialInfo()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController!.navigationBar.prefersLargeTitles = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
