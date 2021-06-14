@@ -38,8 +38,8 @@ class StartController: UIViewController {
     }
 
     @IBAction func onStart(_ sender: Any) {
-        navigationController!.navigationBar.isHidden = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        //navigationController!.navigationBar.isHidden = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             self.openingGameController.filters = self.mainViewModel.getFilters()
             pushController(from: self, to: self.openingGameController, method: .withBackItem)
         }
