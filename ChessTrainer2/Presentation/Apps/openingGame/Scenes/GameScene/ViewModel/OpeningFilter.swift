@@ -43,23 +43,29 @@ class OpeningFilter {
             let filter1 = entireData.filter { $0.name.contains(openingNameFilter!) }
             var filter2: [Opening] = []
             var result: [Opening] = []
+//
+//            if filter1.count >= 2 {
+//                filter2.append(contentsOf: filter1.filter { $0.movesCount <= difficultyFilter! + 2 && $0.movesCount >= difficultyFilter! - 2 })
+//
+//                for _ in 0..<4 {
+//                    if let random = filter2.randomElement() {
+//                        result.append(random)
+//                    }
+//                }
+//            }
+//            else {
+//                for _ in 0..<4 {
+//                    if let random = filter1.randomElement() {
+//                        result.append(random)
+//                    }
+//                }
+//            }
+            for _ in 0..<4 {
+                if let random = filter1.randomElement() {
+                    result.append(random)
+                }
+            }
             
-            if filter1.count >= 2 {
-                filter2.append(contentsOf: filter1.filter { $0.movesCount <= difficultyFilter! + 1 && $0.movesCount >= difficultyFilter! - 2 })
-                
-                for _ in 0..<4 {
-                    if let random = filter2.randomElement() {
-                        result.append(random)
-                    }
-                }
-            }
-            else {
-                for _ in 0..<4 {
-                    if let random = filter1.randomElement() {
-                        result.append(random)
-                    }
-                }
-            }
             completion(madeUnique(input: result))
         }
         catch {

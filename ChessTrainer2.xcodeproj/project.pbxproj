@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		240D62BD2676261C002BEB1D /* OpeningParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D62BC2676261C002BEB1D /* OpeningParser.swift */; };
+		249B748126779024008E88A9 /* LeaderboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249B748026779024008E88A9 /* LeaderboardController.swift */; };
+		249B748326779044008E88A9 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249B748226779044008E88A9 /* LogInController.swift */; };
+		249B74852677905D008E88A9 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249B74842677905D008E88A9 /* RegisterController.swift */; };
 		24BA26062675046200A81F6C /* eco.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE29D752673DA5800F1D9D8 /* eco.json */; };
 		24BA260B267524B900A81F6C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA260A267524B900A81F6C /* MainViewModel.swift */; };
 		24BA260D2675255400A81F6C /* Distributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA260C2675255400A81F6C /* Distributor.swift */; };
@@ -52,6 +55,9 @@
 
 /* Begin PBXFileReference section */
 		240D62BC2676261C002BEB1D /* OpeningParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningParser.swift; sourceTree = "<group>"; };
+		249B748026779024008E88A9 /* LeaderboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardController.swift; sourceTree = "<group>"; };
+		249B748226779044008E88A9 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
+		249B74842677905D008E88A9 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		24BA260A267524B900A81F6C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		24BA260C2675255400A81F6C /* Distributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distributor.swift; sourceTree = "<group>"; };
 		24BA260F26763B5800A81F6C /* NamePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NamePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -163,6 +169,9 @@
 				3F6FB313265FCE7000E41C41 /* StartController.swift */,
 				3F5E26792663DE3100100EBB /* StatsController.swift */,
 				3F6C3359266CCB010070E83C /* TabBarController.swift */,
+				249B748026779024008E88A9 /* LeaderboardController.swift */,
+				249B748226779044008E88A9 /* LogInController.swift */,
+				249B74842677905D008E88A9 /* RegisterController.swift */,
 			);
 			path = MainControllers;
 			sourceTree = "<group>";
@@ -494,6 +503,7 @@
 				3F5E267A2663DE3100100EBB /* StatsController.swift in Sources */,
 				3F6FB372265FD5AC00E41C41 /* Filter.swift in Sources */,
 				ACE29D7B2673DBE300F1D9D8 /* OpeningFilter.swift in Sources */,
+				249B74852677905D008E88A9 /* RegisterController.swift in Sources */,
 				ACE29D722673D60C00F1D9D8 /* openingManager.swift in Sources */,
 				ACE29D7D2673DF3200F1D9D8 /* OpeningViewModel.swift in Sources */,
 				24BA260D2675255400A81F6C /* Distributor.swift in Sources */,
@@ -506,12 +516,14 @@
 				3F6FB334265FCECA00E41C41 /* ControllerHelpers.swift in Sources */,
 				3F6FB314265FCE7000E41C41 /* StartController.swift in Sources */,
 				3F6FB36F265FD47A00E41C41 /* GameHelpers.swift in Sources */,
+				249B748126779024008E88A9 /* LeaderboardController.swift in Sources */,
 				3F6FB310265FCE7000E41C41 /* AppDelegate.swift in Sources */,
 				24BA260B267524B900A81F6C /* MainViewModel.swift in Sources */,
 				3F6FB346265FD0A500E41C41 /* OpeningGameController.swift in Sources */,
 				3F5E26752663D90600100EBB /* intExtension.swift in Sources */,
 				3F5F36FD2662D5EF00FCD034 /* Moves.swift in Sources */,
 				3F6FB312265FCE7000E41C41 /* SceneDelegate.swift in Sources */,
+				249B748326779044008E88A9 /* LogInController.swift in Sources */,
 				3F6FB36B265FD33900E41C41 /* testExtension.swift in Sources */,
 				3F6FB360265FD26F00E41C41 /* GeneralStyleButton.swift in Sources */,
 				3F6FB31A265FCE7000E41C41 /* ChessTrainer2.xcdatamodeld in Sources */,
